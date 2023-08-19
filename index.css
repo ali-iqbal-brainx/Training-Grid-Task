@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+
+.topbar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: yellow;
+    height: 7%;
+}
+
+.sidebar {
+    position: fixed;
+    height: 93%;
+    background-color: bisque;
+
+    top: 7%;
+    left: 0;
+    width: 15%;
+}
+
+.main-content {
+    position: absolute;
+    top: 7%; 
+    left: 15%;
+    width: 85%;
+    height: calc(100% - 7%);
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: orangered;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+
+.chart1 {
+    grid-row: 2/3;
+    grid-column: 1/5;
+    background-color: green;
+}
+
+.map1 {
+    grid-row: 2/3;
+    grid-column: 5/-1;
+    background-color: palegoldenrod;
+
+}
+
+.chart2 {
+    grid-row: 3/-1;
+    grid-column: 1/5;
+    background-color: rebeccapurple;
+}
+
+.map2 {
+    grid-row: 3/-1;
+    grid-column: 5/-1;
+    background-color: palegreen;
+
+}
+
+.number1 {
+    background-color: gray;
+}
+
+.number2 {
+    background-color: green;
+}
+
+.number3 {
+    background-color: brown;
+}
+
+.number4 {
+    background-color: pink;
+}
+
+.number5 {
+    background-color: rebeccapurple;
+}
+
+.number6 {
+    background-color: magenta;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        grid-column: 1/-1;
+    }
+
+    .chart1 {
+        grid-row: 7/8;
+    }
+
+    .map1 {
+        grid-row: 8/9;
+    }
+
+    .chart2 {
+        grid-row: 9/10;
+    }
+
+    .map2 {
+        grid-row: 10/11;
+    }
+
+}
